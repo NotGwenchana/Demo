@@ -1,0 +1,198 @@
+.edit-member-point {
+  max-width: 520px;
+  margin: 40px auto;
+  padding: 32px 28px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+}
+
+.edit-member-point h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-top: 0;
+  margin-bottom: 28px;
+  letter-spacing: -0.3px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #334155;
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #f8fafc;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  background: #ffffff;
+}
+
+.form-group input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-group input::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.input-with-button {
+  display: flex;
+  gap: 10px;
+}
+
+.input-with-button input {
+  flex: 1;
+}
+
+.input-with-button .validate-btn {
+  flex-shrink: 0;
+  padding: 10px 20px;
+  background: #8b5cf6;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.input-with-button .validate-btn:hover:not(:disabled) {
+  background: #7c3aed;
+}
+
+.input-with-button .validate-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.member-info {
+  background: #f1f5f9;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  border-left: 4px solid #8b5cf6;
+}
+
+.member-info p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #1e293b;
+}
+
+.member-info p strong {
+  color: #475569;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  margin: 24px 0 16px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s, opacity 0.2s;
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.add-btn {
+  background: #10b981;
+  color: white;
+  flex: 1;
+}
+
+.add-btn:hover:not(:disabled) {
+  background: #059669;
+}
+
+.remove-btn {
+  background: #ef4444;
+  color: white;
+  flex: 1;
+}
+
+.remove-btn:hover:not(:disabled) {
+  background: #dc2626;
+}
+
+.save-btn {
+  background: #3b82f6;
+  color: white;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.save-btn:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+.message {
+  margin-top: 20px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  white-space: pre-line;
+  line-height: 1.6;
+}
+
+.message.success {
+  background: #ecfdf5;
+  color: #065f46;
+  border-left: 4px solid #10b981;
+}
+
+.message.error {
+  background: #fef2f2;
+  color: #991b1b;
+  border-left: 4px solid #ef4444;
+}
+
+.back-btn {
+  padding: 10px 20px;
+  background: #8b5cf6;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  margin-top: 8px;
+  text-decoration: none;
+}

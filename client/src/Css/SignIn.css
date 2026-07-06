@@ -1,0 +1,387 @@
+@import "tailwindcss";
+/* SignIn.css - Sign In Page Styles */
+
+/* Main Container */
+.signin-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* White Box Container */
+.signin-container {
+  max-width: 450px;
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Headings */
+.signin-container h1 {
+  color: #7ed32f;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.signin-container .tagline {
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+}
+
+/* Error Message */
+.error-message {
+  background: #fee;
+  color: #c33;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-left: 4px solid #c33;
+}
+
+.error-icon {
+  font-size: 20px;
+}
+
+.error-message p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Form Styles */
+.signin-form {
+  margin-bottom: 20px;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+/* Input Wrapper for Icons */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  font-size: 18px;
+  color: #999;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group input:hover {
+  border-color: #764ba2;
+}
+
+/* Forgot Password Link */
+.forgot-password {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.forgot-password a {
+  color: #999;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.forgot-password a:hover {
+  color: #667eea;
+  text-decoration: underline;
+}
+
+/* Sign In Button */
+.signin-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+.signin-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.signin-btn:active {
+  transform: translateY(0);
+}
+
+/* Sign Up Link */
+.signup-link {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.signup-link p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.signup-link a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.signup-link a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* Back Link */
+.back-link {
+  text-align: center;
+}
+
+.back-link a {
+  color: #999;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.back-link a:hover {
+  color: #667eea;
+  text-decoration: underline;
+}
+
+/* Simple Version Styles (No Icons) */
+/* Use this if you choose the simpler version */
+.form-group input {
+  padding: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .signin-container {
+    padding: 30px 25px;
+  }
+  
+  .signin-container h1 {
+    font-size: 1.8rem;
+  }
+  
+  .form-group input {
+    padding: 10px 12px;
+  }
+  
+  .signin-btn {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .signin-container {
+    padding: 25px 20px;
+  }
+  
+  .signin-container h1 {
+    font-size: 1.5rem;
+  }
+  
+  .tagline {
+    font-size: 0.85rem;
+  }
+  
+  .form-group label {
+    font-size: 0.85rem;
+  }
+  
+  .form-group input {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .signin-btn {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Optional: Add a decorative background pattern */
+.signin-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  z-index: 0;
+}
+
+.signin-page {
+  position: relative;
+}
+
+.signin-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Eye Toggle Button */
+.eye-toggle {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  color: #999;
+  transition: color 0.3s;
+  background: white;
+  padding: 0;
+}
+
+.eye-toggle:hover {
+  color: #667eea;
+}
+
+/* Password Wrapper for Eye Toggle */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding: 12px;
+  padding-right: 40px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  box-sizing: border-box;
+}
+
+.password-wrapper input:focus { /*                 Password Input Focus          */
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.password-wrapper input:hover {  
+  border-color: #764ba2;
+}
+
+/* Submit Button */
+.signin-btn {
+  width: 90%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+.signup-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.signup-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.signup-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Sign Up Link */
+.signin-link {
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+.signin-link p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.signin-link a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.signin-link a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}

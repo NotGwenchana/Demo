@@ -1,0 +1,142 @@
+/*body {
+    background-color: white;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.home-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.footer {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    padding: 1rem;
+    background-color: #f8f8f8;
+    margin-bottom: 0;
+    cursor: pointer;
+    bottom: 0;
+    margin-top: auto;
+}
+    /* HomePage.css - Complete Version */
+
+/* Main Container */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+/* Content Area */
+.content {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Welcome Title */
+.content h1 {
+  color: #7ed32f;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Food Image */
+.home-food-image {
+  max-width: 80%;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Description Text */
+.content p {
+  color: #555;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+/* Footer */
+.footer {
+  background: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #e9ecef;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Footer Links */
+.footer a {
+  color: #6c757d;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  padding: 5px 10px;
+}
+
+.footer a:hover {
+  color: #d32f2f;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    padding: 40px 20px;
+  }
+  
+  .content h1 {
+    font-size: 2rem;
+  }
+  
+  .home-food-image {
+    max-width: 90%;
+  }
+  
+  .content p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .footer {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 30px 15px;
+  }
+  
+  .content h1 {
+    font-size: 1.5rem;
+  }
+  
+  .content p {
+    font-size: 0.9rem;
+  }
+  
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+

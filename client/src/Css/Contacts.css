@@ -1,0 +1,214 @@
+/* Contacts.css - Simple Version */
+
+.contacts-page {
+  min-height: 100vh;
+  background: white;
+  padding: 20px;
+}
+
+.contacts-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+/* Headings */
+h1 {
+  color: #7ed32f;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+.tagline {
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Contact Info Box */
+.contact-info-section {
+  background: #ffe6f0;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.contact-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.contact-item {
+  flex: 1;
+  min-width: 200px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-icon {
+  font-size: 30px;
+}
+
+.contact-item h3 {
+  color: #d32f2f;
+  margin: 0 0 5px 0;
+}
+
+.contact-item p {
+  margin: 0;
+  color: #666;
+}
+
+.contact-box {
+  margin-bottom: 30px;
+}
+
+/* Locations Grid */
+.locations-section {
+  margin-bottom: 40px;
+}
+
+.locations-section h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Individual Location Card */
+.location-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.location-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 2px solid #ff9800;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.location-icon {
+  font-size: 24px;
+}
+
+.location-header h3 {
+  color: #d32f2f;
+  margin: 0;
+}
+
+.address {
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.phone {
+  color: #666;
+}
+
+/* Button */
+.direction-btn {
+  background: none;
+  border: 1px solid #d32f2f;
+  color: #d32f2f;
+  padding: 8px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s;
+}
+
+.direction-btn:hover {
+  background: #d32f2f;
+  color: white;
+}
+
+/* Map Section */
+.map-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.map-placeholder {
+  background: #f5f5f5;
+  border: 2px dashed #d32f2f;
+  border-radius: 15px;
+  padding: 40px;
+}
+
+.map-icon {
+  font-size: 50px;
+}
+
+.map-note {
+  color: #999;
+  font-size: 14px;
+}
+
+/* Back Link */
+.back-link {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.back-link a {
+  background: #d32f2f;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 50px;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.back-link a:hover {
+  background: #b71c1c;
+  transform: translateY(-2px);
+}
+
+/* Mobile Friendly */
+@media (max-width: 768px) {
+  .contacts-container {
+    padding: 20px;
+  }
+  
+  .contact-details {
+    flex-direction: column;
+  }
+  
+  .locations-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  padding: 40px;
+}
+
+/* Menu container styling */
+ul {
+  max-width: 500px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  list-style: none;
+}
+
+/* Each menu item - puts image on the RIGHT side */
+li {
+  display: flex;
+  flex-direction: row-reverse;
+  /* Image goes to right side */
+  align-items: center;
+  justify-content: space-between;
+  /* Space between text and image */
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  gap: 16px;
+}
+
+/* Remove border from last item */
+li:last-child {
+  border-bottom: none;
+}
+
+/* Text styling */
+li div {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  flex: 1;
+  /* Allows text to take remaining space */
+}
+
+/* Image styling */
+li img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Special handling for the two items without images */
+li:not(:has(img)) {
+  flex-direction: row;
+  /* Text on left, no image */
+  justify-content: flex-start;
+  gap: 0px;
+}
+
+/* Button styling */
+button {
+  margin-left: 16px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  background-color: #949391;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+/* Checkbox group - stack vertically below the text */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+  width: 100%;
+}
+
+.checkbox-group div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox-group label {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* Override for Party Pack list items to allow vertical layout */
+.party-pack-item {
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  width: 100%;
+}
+
+.party-pack-item .checkbox-group {
+  width: 100%;
+}
+
+/* Centered image for Gim Bap and Party Pack */
+.centered-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.centered-image img {
+  width: 120px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Selection text styling - keeps text above checkboxes */
+.selection-text {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #555;
+  width: 100%;
+}
+
+.select-size {
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+/* Promotion Banners - Shared Styles */
+.promotion-banner {
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 10px;
+  margin: 10px 0 20px 0;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.promotion-banner small {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin-top: 4px;
+  opacity: 0.9;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.01);
+  }
+}
+
+/* Hungry Night Banner */
+.hungry-night-banner {
+  background: linear-gradient(135deg, #2d3436, #1a1a2e, #16213e);
+  color: #f0e6d3;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  border: 1px solid #f0e6d3;
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 4px 30px rgba(100, 100, 255, 0.3);
+  }
+}
+
+/* Tea Set Hour Banner */
+.tea-set-banner {
+  background: linear-gradient(135deg, #2d5016, #4a7c2e, #6aa84f);
+  color: #f5f0e1;
+  box-shadow: 0 4px 15px rgba(74, 124, 46, 0.4);
+  border: 1px solid #a8d08d;
+}
+
+/* Price styling with discount */
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 6px;
+  font-size: 0.9em;
+}
+
+.discounted-price {
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+.discount-badge {
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-left: 6px;
+  display: inline-block;
+}
+
+/* Hungry Night Badge */
+.discount-badge.hungry-night {
+  background: linear-gradient(135deg, #2d3436, #1a1a2e);
+  color: #f0e6d3;
+  border: 1px solid #f0e6d3;
+  animation: badgePulse 1.5s ease-in-out infinite;
+}
+
+/* Tea Set Hour Badge */
+.discount-badge.tea-set {
+  background: linear-gradient(135deg, #2d5016, #4a7c2e);
+  color: #f5f0e1;
+  border: 1px solid #a8d08d;
+}
+
+/* Excluded Badge */
+.excluded-badge {
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-left: 6px;
+  display: inline-block;
+  background: #f0f0f0;
+  color: #666;
+  border: 1px solid #ccc;
+}
+
+@keyframes badgePulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.discounted-price {
+  color: #ff6b6b;
+}
+
+.tea-set-banner .discounted-price {
+  color: #a8d08d;
+}

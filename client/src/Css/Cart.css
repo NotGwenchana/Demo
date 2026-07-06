@@ -1,0 +1,248 @@
+.cart-container {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+.cart-title {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.cart-items-list {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 300px;
+  margin-bottom: 10px;
+}
+
+.cart-empty {
+  text-align: center;
+  color: #999;
+  padding: 20px;
+}
+
+.cart-item {
+  font-size: 12px;
+  margin-bottom: 12px;
+  padding: 8px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.cart-item-name {
+  font-weight: bold;
+}
+
+.cart-item-detail {
+  color: #666;
+  margin-left: 8px;
+  font-size: 11px;
+}
+
+.cart-item-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.cart-quantity-btn {
+  margin-right: 8px;
+  padding: 2px 6px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.cart-quantity-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.cart-quantity {
+  margin: 0 4px;
+}
+
+.cart-item-price {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.cart-remove-btn {
+  padding: 2px 6px;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.cart-remove-btn:hover {
+  background-color: #cc0000;
+}
+
+.cart-divider {
+  margin: 10px 0;
+  border: none;
+  border-top: 1px solid #eee;
+}
+
+.cart-footer {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+/* New styles for the improved cart total section */
+.cart-total-section {
+  background-color: #f8f8f8;
+  padding: 12px;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+
+.cart-total-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.cart-total-row:last-child {
+  margin-bottom: 0;
+}
+
+.cart-grand-total {
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
+  border-top: 1px solid #ddd;
+  padding-top: 8px;
+  margin-top: 4px;
+}
+
+/* Member points button styling */
+.cart-member-points-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  transition: background-color 0.2s;
+}
+
+.cart-member-points-btn:hover:not(:disabled) {
+  background-color: #f57c00;
+}
+
+.cart-member-points-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.cart-buttons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.cart-clear-btn,
+.cart-checkout-btn {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cart-clear-btn {
+  background-color: #ff4444;
+  color: white;
+}
+
+.cart-clear-btn:hover:not(:disabled) {
+  background-color: #cc0000;
+}
+
+.cart-checkout-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.cart-checkout-btn:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.cart-clear-btn:disabled,
+.cart-checkout-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Location form styling */
+.cart-location-form {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.cart-location-form label {
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+select[name="order-location"] {
+  border: 1px solid #050505;
+  border-radius: 4px;
+  margin-left: 8px;
+  padding: 6px 8px;
+  width: calc(100% - 120px);
+  cursor: pointer;
+}
+
+select[name="order-location"]:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 3px rgba(76, 175, 80, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cart-container {
+    padding: 10px;
+  }
+  
+  .cart-location-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cart-location-form label {
+    margin-bottom: 5px;
+  }
+  
+  select[name="order-location"] {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .cart-total-row {
+    font-size: 12px;
+  }
+  
+  .cart-grand-total {
+    font-size: 14px;
+  }
+}
